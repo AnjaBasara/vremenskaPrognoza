@@ -27,7 +27,7 @@ export class PodesavanjaPage {
     }
 
     sacuvajLokaciju(lokacija: Lokacija) {
-        this.storage.set('lokacija', JSON.stringify(lokacija));
+        this.storage.set('lokacija', JSON.stringify(lokacija))
         this.navCtrl.pop();
     }
 

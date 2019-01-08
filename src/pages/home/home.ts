@@ -58,6 +58,4 @@ export class HomePage {
     podesavanja() {
         this.navCtrl.push(PodesavanjaPage, {lokacija: this.lokacija});
     }
-
-
 }
