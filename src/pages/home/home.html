@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title *ngIf="prognoza">
+            {{prognoza.name}}, {{prognoza.sys.country}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+    <ion-card *ngIf="prognoza">
+        <img [src]="putanja+prognoza.weather[0].icon+ekstenzija" [alt]="prognoza.weather[0].main"/>
+        <div class="card-title">{{prognoza.main.temp}}&deg;</div>
+        <div class="card-subtitle">{{prognoza.weather[0].main}}</div>
+    </ion-card>
+
+    <ion-card *ngIf="prognoza">
+        <ion-list>
+            <ion-item>
+                <ion-icon name="trending-down"></ion-icon>
+                {{prognoza.main.temp_min}}&deg;
+            </ion-item>
+            <ion-item>
+                <ion-icon name="trending-up"></ion-icon>
+                {{prognoza.main.temp_max}}&deg;
+            </ion-item>
+            <ion-item>
+                <ion-icon name="cloud"></ion-icon>
+                {{prognoza.clouds.all}}%
+            </ion-item>
+            <ion-item>
+                <ion-icon name="water"></ion-icon>
+                {{prognoza.main.humidity}}%
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <button ion-button block color="light" (click)="podesavanja()">Settings</button>
+</ion-footer>
