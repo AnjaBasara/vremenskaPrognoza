@@ -9,6 +9,7 @@ import {HomePage} from '../pages/home/home';
 import {PodesavanjaPage} from "../pages/podesavanja/podesavanja";
 import {PrognozaServiceProvider} from '../providers/prognoza-service/prognoza-service';
 import {HttpClientModule} from "@angular/common/http";
+import {IonicStorageModule} from "@ionic/storage";
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import {HttpClientModule} from "@angular/common/http";
     imports: [
         BrowserModule,
         IonicModule.forRoot(MyApp),
-        HttpClientModule
+        HttpClientModule,
+        IonicStorageModule.forRoot()
     ],
     bootstrap: [IonicApp],
     entryComponents: [
