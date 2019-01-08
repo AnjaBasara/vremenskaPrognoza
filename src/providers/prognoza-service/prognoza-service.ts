@@ -14,6 +14,4 @@ export class PrognozaServiceProvider {
     vratiPrognozu(grad, drzava) {
         return this.http.get(this.url + grad + "," + drzava + "&units=" + this.units + "&APPID=" + this.apiKey);
     }
-
-
 }

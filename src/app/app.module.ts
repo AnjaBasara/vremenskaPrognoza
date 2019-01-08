@@ -32,7 +32,6 @@ import {HttpClientModule} from "@angular/common/http";
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         PrognozaServiceProvider,
-    PrognozaServiceProvider
     ]
 })
 export class AppModule {
