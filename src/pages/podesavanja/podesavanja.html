@@ -1,15 +1,11 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>Podešavanja</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <form [formGroup]="forma" (ngSubmit)="sacuvajLokaciju(forma.value)">
-
     <ion-item>
       <ion-label>Grad</ion-label>
       <ion-input type="text" formControlName="grad"></ion-input>
@@ -21,6 +17,5 @@
     </ion-item>
 
     <button ion-button block type="submit" [disabled]="!forma.valid">Sačuvaj lokaciju</button>
-
   </form>
 </ion-content>
